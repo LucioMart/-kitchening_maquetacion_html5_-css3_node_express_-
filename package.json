@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "name": "-kitchening_maquetacion_html5_-css3_node_express_-",
+  "description": "",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucioMart/-kitchening_maquetacion_html5_-css3_node_express_-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucioMart/-kitchening_maquetacion_html5_-css3_node_express_-/issues"
+  },
+  "homepage": "https://github.com/LucioMart/-kitchening_maquetacion_html5_-css3_node_express_-#readme"
+}
