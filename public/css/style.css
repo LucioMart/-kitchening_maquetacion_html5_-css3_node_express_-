@@ -64,3 +64,27 @@ header nav ul li a {
     color: white;
     text-transform: uppercase;
 }
+
+/* Main  */
+
+.banner img {
+    display: none;
+}
+
+article {
+    width: 100%;
+}
+
+article .image-container {
+    position: relative;
+}
+
+article .image-container img.label {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+article .image-container a.zoom {
+    width: 100%;
+}
