@@ -24,3 +24,43 @@ body {
     padding: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* Header */
+
+header {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+header img {
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #bbbfbe;
+    margin: 15px auto 30px;
+    width: 180px;
+}
+
+header a.burger {
+    display: block;
+    width: 35px;
+    background-color: gray;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+header nav ul li {
+    width: 100;
+    background-color: #63635d;
+    margin-bottom: 1px;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav ul li a {
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+}
