@@ -11,3 +11,16 @@
     margin: 0;
 }
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-image: url('/images/bg-body.png');
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
