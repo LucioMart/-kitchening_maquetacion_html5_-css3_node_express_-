@@ -6,6 +6,44 @@
 <body>
 
     <%- include('partials/header') %>
+
+    <main>
+        <div>
+            <div>
+                <h2>Agregar productos</h2>
+                <div>
+                    <div>
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            <div>
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre">
+                            </div>
+                            <div>
+                                <label for="description">Descripción</label>
+                                <input type="text" id="description" name="description">
+                            </div>
+                            <select name="category" id="">
+                                <option selected hidden>Seleccione la categoria</option>
+                                <% categories.forEach(category => { %>
+
+
+                                    <option value="<%= category %> "><%= category %> </option>
+
+                               <% }) %> 
+                            </select>
+                            <div>
+                                <label for="nombre">Imagen</label>
+                                <input type="file" id="image" name="image">
+                            </div>
+                            <div>
+                                <button type="submit">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     
     <%- include('partials/footer') %> 
     

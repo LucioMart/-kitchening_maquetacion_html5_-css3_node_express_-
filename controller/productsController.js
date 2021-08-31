@@ -5,6 +5,8 @@ const categories = require('../data/categories.json')
 
 module.exports = {
     add: (req, res) => {
-        return res.render('productAdd')
+        return res.render('productAdd', {
+            categories : categories
+        })
     }
 }
