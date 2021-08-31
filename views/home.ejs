@@ -1,28 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitchening</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+
+<%- include('partials/head') %> 
+
 <body>
-    <header>
-        <img src="/images/logo.jpg" alt="">
-        <a class="burger" href="#"><i class="fas fa-bars"></i></a>
-        <nav>
-            <ul>
-                <li class="header-nav-ul-li-a"><a href="#">Home</a></li>
-                <li><a href="#">Quienes somos</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Porfolios</a></li>
-                <li><a href="#">Sucursales</a></li>
-                <li><a href="#">Contactos</a></li>
-            </ul>
-        </nav>
-    </header>
+    
+    <%- include('partials/header') %> 
+
     <main>
         <section class="banner">
             <img src="/images/img-banner.jpg" alt="">
@@ -102,17 +86,9 @@
             </article>
         </section>
     </main>
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Quienes somos</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Porfolio</a></li>
-                <li><a href="#">Sucursales</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </footer>
+   
+
+    <%- include('partials/footer') %> 
+
 </body>
 </html>
