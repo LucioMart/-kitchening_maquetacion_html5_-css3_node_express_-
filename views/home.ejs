@@ -18,7 +18,15 @@
             <article class="product">
                 <div class="image-container">
                     <img src="/images/<%= product.photo %> " alt="" class="photo">
+
+                    <% if(product.category == "sale") { %> 
                     <img src="/images/img-descuento.png" alt="" class="label">
+                    <% } else if(product.category == "new") { %> 
+                        <img src="/images/img-nuevo.png" alt="" class="label">
+                        <% } else { %>
+                            <img src="/images/img-gratis.png" alt="" class="label">
+                            <% } %>  
+
                     <a href="" class="zoom">ampliar foto</a>
                 </div>
                 <h4><%= product.name %> </h4>
