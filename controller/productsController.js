@@ -15,6 +15,23 @@ module.exports = {
 
     })
 
+    },
+    search: (req, res) => {
+        
+    }, 
+    store: (req, res) => {
+        res.send('req.body')
+    },
+    edit: (req, res) => {
+        return res.render('productEdit', {
+            categories
+        })
+    }, 
+    update: (req, res) => {
+        res.send(req.body)
+    }, 
+    destroy: (req, res) => {
+
     }
 
 }
