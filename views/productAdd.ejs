@@ -7,22 +7,22 @@
 
     <%- include('partials/header') %>
 
-    <main>
-        <div>
-            <div>
+    <main class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 mx-auto mt-5">
                 <h2>Agregar productos</h2>
-                <div>
-                    <div>
+                <div class="card">
+                    <div class="card-header">
                         <form action="" method="POST" enctype="multipart/form-data">
-                            <div>
-                                <label for="nombre">Nombre</label>
-                                <input type="text" id="nombre" name="nombre">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" class="form-control">
                             </div>
-                            <div>
-                                <label for="description">Descripción</label>
-                                <input type="text" id="description" name="description">
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Descripción</label>
+                                <textarea id="description" name="description" class="form-control"></textarea> 
                             </div>
-                            <select name="category" id="">
+                            <select name="category" id="" class="form-select" aria-label="Default select example">
                                 <option selected hidden>Seleccione la categoria</option>
                                 <% categories.forEach(category => { %>
 
@@ -31,12 +31,12 @@
 
                                <% }) %> 
                             </select>
-                            <div>
-                                <label for="nombre">Imagen</label>
-                                <input type="file" id="image" name="image">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-lebel">Imagen</label>
+                                <input type="file" id="image" name="image" class="form-control">
                             </div>
                             <div>
-                                <button type="submit">Guardar</button>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
                         </form>
                     </div>
