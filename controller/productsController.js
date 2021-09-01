@@ -8,5 +8,13 @@ module.exports = {
         return res.render('productAdd', {
             categories : categories
         })
+    },
+    detail: (req, res) => {
+        return res.render('productDetail', {
+            product : products.find(producto => producto.id === +req.params.id)
+
+    })
+
     }
+
 }
