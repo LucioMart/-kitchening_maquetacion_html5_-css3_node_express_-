@@ -17,7 +17,7 @@
 
             <article class="product">
                 <div class="image-container">
-                    <img src="/images/<%= product.photo %> " alt="" class="photo">
+                    <img src="/images/<%= product.photo[0] %> " alt="" class="photo">
 
                     <% if(product.category == "sale") { %> 
                     <img src="/images/img-descuento.png" alt="" class="label">
