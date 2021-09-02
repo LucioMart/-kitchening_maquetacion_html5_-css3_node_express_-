@@ -1,4 +1,5 @@
-const {check} = require('express-validation')
+const { check } = require('express-validator')
+
 
 module.exports = [
     check('name')
@@ -12,3 +13,4 @@ module.exports = [
     check('category')
     .notEmpty().withMessage('Debes indicar la categoria.')
 ]
+

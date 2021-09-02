@@ -2,7 +2,7 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "express-validation": "^3.0.8",
+    "express-validator": "^3.2.1",
     "method-override": "^3.0.0",
     "multer": "^1.4.3"
   },
