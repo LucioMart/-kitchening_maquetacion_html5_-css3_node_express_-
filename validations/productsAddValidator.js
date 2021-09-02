@@ -9,6 +9,6 @@ module.exports = [
         min : 20
     }).withMessage('La descripción debe tener como minimo 20 caracteres.'),
 
-    check('categiry')
+    check('category')
     .notEmpty().withMessage('Debes indicar la categoria.')
 ]
