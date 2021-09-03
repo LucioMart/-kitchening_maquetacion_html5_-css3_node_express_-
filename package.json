@@ -1,26 +1,18 @@
 {
-  "dependencies": {
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "express-validator": "^3.2.1",
-    "method-override": "^3.0.0",
-    "multer": "^1.4.3"
-  },
-  "name": "-kitchening_maquetacion_html5_-css3_node_express_-",
-  "description": "",
+  "name": "kitchening",
   "version": "1.0.0",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LucioMart/-kitchening_maquetacion_html5_-css3_node_express_-.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LucioMart/-kitchening_maquetacion_html5_-css3_node_express_-/issues"
-  },
-  "homepage": "https://github.com/LucioMart/-kitchening_maquetacion_html5_-css3_node_express_-#readme"
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.3"
+  }
 }

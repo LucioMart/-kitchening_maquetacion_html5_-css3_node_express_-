@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('partials/head') %> 
+
+<body>
+
+    <%- include('partials/header') %>
+    
+    <main class="container">
+        <div>
+            <div>
+                <h2>Modificar producto</h2>
+                <div>
+                    <div>
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <div>
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="name" value="">
+                            </div>
+                            <div>
+                                <label for="description">description</label>
+                                <textarea id="description" name="description" value="" style="resize: none;"></textarea>
+                            </div>
+                            <select name="category" id="">
+                                <option  value="">Seleccione la categoria</option>
+                                <option value="">oferta</option>
+                            </select>
+                            <div>
+                                <label for="image">Imagen</label>
+                                <input type="file" id="nombre" name="image" value="" multiple>
+                            </div>
+                            <div>
+                                <button type="submit">Guardar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
