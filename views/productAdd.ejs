@@ -16,24 +16,28 @@
                         <form action="" method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" id="name" name="name" class="form-control">
+                                <input type="text" id="name" name="name" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : locals.old && old.name ? 'is-valid' : null %>  ">
+                                <span class="text-danger small"> <%= locals.errors && errors.name ? errors.name.msg : null %>  </span>
                             </div>
                             <div class="mb-3">
                                 <label for="description" class="form-label">Descripción</label>
-                                <textarea id="description" name="description" class="form-control"></textarea> 
+                                <textarea id="description" name="description" class="form-control <%= locals.errors && errors.description : 'is-invalid' : locals.old && old.description ? 'is-valid' : null %>  "></textarea>
+                                <span class="text-danger small"><%= locals.errors && errors.description ? errors.description.msg : null  %> </span> 
                             </div>
                             <select name="category" id="" class="form-select" aria-label="Default select example">
                                 <option selected hidden>Seleccione la categoria</option>
                                 <% categories.forEach(category => { %>
 
 
-                                    <option value="<%= category %> "><%= category %> </option>
+                                    <option value="<%= category %> " <%= locals.old && old.category === category ? 'selected' : null %>  ><%= category %></option>
 
                                <% }) %> 
                             </select>
+                            <span class="text-danger small"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
                             <div class="mb-3">
-                                <label for="nombre" class="form-lebel">Imagen</label>
-                                <input type="file" id="image" name="image" class="form-control">
+                                <label for="image" class="form-lebel">Imagen</label>
+                                <input type="file" id="image" name="image" class="form-control <%= locals.errors && errors.image ? 'is-invalid' : locals.old && old.image ? 'is-valid' : null %> ">
+                                <span class="text-danger small"><%= locals.error && errors.image ? errors.image.msg : null %> </span>
                             </div>
                             <div>
                                 <button type="submit" class="btn btn-primary">Guardar</button>

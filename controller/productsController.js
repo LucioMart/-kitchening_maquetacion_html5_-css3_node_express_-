@@ -61,7 +61,8 @@ module.exports = {
     },
     edit: (req, res) => {
         return res.render('productEdit', {
-            categories
+            categories,
+            product : products.find(producto => producto.id === +req.params.id)
         })
     }, 
     update: (req, res) => {
