@@ -12,24 +12,28 @@
         <section class="row">
 
            <article class="col-12 col-md-8 mx-auto mb-5">
-                <div class="image-container">
-                    <img src="/images/<%= product.photo %> " alt="" class="photo">
-
-                    <% if(product.category == "sale") { %> 
-                    <img src="/images/img-descuento.png" alt="" class="label">
-                    <% } else if(product.category == "new") { %> 
-                        <img src="/images/img-nuevo.png" alt="" class="label">
-                        <% } else { %>
-                            <img src="/images/img-gratis.png" alt="" class="label">
-                            <% } %>  
-
-                    <a href="" class="zoom">ampliar foto</a>
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-7">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img id="imgMain" src="/images/products/<%= product.photos[0] %> " alt="" class="img-fluid rounded-start">
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <% product.photos.forEach(photo => { %> 
+                                        <img width="100px" src="/images/products/<%= photo %> " alt="" onclick="document.getElementById('imgMain').setAttribute('src', '/images/products/<%= photo %>')">
+                                    <% }) %> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card-body"> 
+                                <h5 class="card-title"><%= product.name %> </h5>
+                                <p class="card-text"><%= product.description %> </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h4><%= product.name %> </h4>
-                <p class="description">
-                    <%= product.description %> 
-                </p>
-              
             </article>
 
          
