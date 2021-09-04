@@ -5,7 +5,6 @@ const products = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', '
 const categories = require('../data/categories.json')
 
 const { validationResult } = require('express-validator')
-const { EWOULDBLOCK } = require('constants')
 
 module.exports = {
     add: (req, res) => {
@@ -51,7 +50,7 @@ module.exports = {
 
             products.push(product)
             fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json', JSON.stringify(products, null, 2), 'utf-8'))
-            res.redirect('/admin')
+            res.redirect('admin')
 
         } else {
             return res.render('productAdd', {
@@ -108,7 +107,7 @@ module.exports = {
             let modificados = products.map(product => product.id === +req.params.id ? productEdit : product)
 
             fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'), JSON.stringify(modificados, null, 2), 'utf-8')
-            res.redirect('/admin')
+            res.redirect('admin')
 
         } else {
             return res.render('productEdit', {
@@ -125,14 +124,14 @@ module.exports = {
         let product = products.find(product => product.id === +req.params.id)
         product.photos.forEach(photo => {
             if(fs.existsSync(path.join(__dirname, '..', 'public', 'images', 'products', photo))) {
-                fs.unlinkSync(path.join(__dirname, '..', 'public', 'images', 'products'. photo ))
+                fs.unlinkSync(path.join(__dirname, '..', 'public', 'images', 'products', photo ))
             }
         })
 
         let eternales = products.filter(product => product.id !== +req.params.id)
 
         fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'), JSON.stringify(eternales, null, 2), 'utf-8')
-        res.redirect('/admin')
+        res.redirect('admin')
 
     }
 

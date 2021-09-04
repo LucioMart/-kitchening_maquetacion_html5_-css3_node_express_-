@@ -7,13 +7,11 @@
 
     <%- include('partials/header') %> 
     
-    <main>
+    <main class="container">
 
-        <section class="products">
+        <section class="row">
 
-            
-
-            <article class="product">
+           <article class="col-12 col-md-8 mx-auto mb-5">
                 <div class="image-container">
                     <img src="/images/<%= product.photo %> " alt="" class="photo">
 
@@ -31,7 +29,7 @@
                 <p class="description">
                     <%= product.description %> 
                 </p>
-                <a href="" class="more">ver más</a>
+              
             </article>
 
          
