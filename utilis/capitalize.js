@@ -1,0 +1,1 @@
+module.exports = capitalize = srt => srt.charAt(0).toUpperCase() + srt.slice(1).toLowerCase()
