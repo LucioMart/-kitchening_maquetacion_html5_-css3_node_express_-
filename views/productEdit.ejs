@@ -10,7 +10,7 @@
     <main class="container">
         <div class="row">
             <div class="col-12 col-md-8 mx-auto mt-5">
-                <h2>Modificar producto</h2>
+                <h2>Editar producto</h2>
                 <div class="card">
                     <div class="card-header">
                         <form action="/products/edit/<%= product.id %>?_method=PUT " method="post" enctype="multipart/form-data">
@@ -30,7 +30,7 @@
                                 
                                 <% categories.forEach(category => { %> 
 
-                                    <option value="<%= category %>" <%= product.category === category ? 'selected' : null %> ><%= category  %> </option>
+                                    <option value="<%= category %>" <%= product.category === category ? 'selected' : null %> ><%= capitalize(category)  %> </option>
                                 
                                 <% }) %> 
 

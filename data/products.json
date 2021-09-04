@@ -7,7 +7,7 @@
       "img-pdto-2.jpg",
       "img-pdto-3.jpg"
     ],
-    "category": "sale"
+    "category": "oferta"
   },
   {
     "id": 3,
@@ -16,7 +16,7 @@
     "photos": [
       "img-pdto-3.jpg"
     ],
-    "category": "free"
+    "category": "gratis"
   },
   {
     "id": 4,
