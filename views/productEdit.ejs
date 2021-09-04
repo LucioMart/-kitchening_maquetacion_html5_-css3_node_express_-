@@ -8,30 +8,42 @@
     <%- include('partials/header') %>
     
     <main class="container">
-        <div>
-            <div>
+        <div class="row">
+            <div class="col-12 col-md-8 mx-auto mt-5">
                 <h2>Modificar producto</h2>
-                <div>
-                    <div>
+                <div class="card">
+                    <div class="card-header">
                         <form action="" method="post" enctype="multipart/form-data">
-                            <div>
-                                <label for="nombre">Nombre</label>
-                                <input type="text" id="nombre" name="name" value="">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label <%= locals.errors && errors.name ? 'is-invalid' : locals.old && old.name ? 'is-valid' : null %> ">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="name" value="<%= product.name %> ">
+                                <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                             </div>
-                            <div>
-                                <label for="description">description</label>
-                                <textarea id="description" name="description" value="" style="resize: none;"></textarea>
+                            <div class="mb-3">
+                                <label for="description" class="form-label <%= locals.errors && errors.description ? 'is-invalid' : locals.old && old.description ? 'is-valid' : null %> " >Descripción</label>
+                                <textarea id="description" class="form-control" name="description" value="" style="resize: none;"><%= product.description %> </textarea>
+                                <span class="text-danger small"><%= locals.errors && errors.description ? errors.description.msg : null %> </span>
                             </div>
-                            <select name="category" id="">
-                                <option  value="">Seleccione la categoria</option>
-                                <option value="">oferta</option>
+                            
+                            <select name="category" class="form-select" id="" aria-label="Default select example">
+                                <option selected hidden  value="">Seleccione la categoria</option>
+                                
+                                <% categories.forEach(category => { %> 
+
+                                    <option value="<%= category %>" <%= product.category === category ? 'selected' : null %> ><%= category  %> </option>
+                                
+                                <% }) %> 
+
                             </select>
-                            <div>
-                                <label for="image">Imagen</label>
-                                <input type="file" id="nombre" name="image" value="" multiple>
+                            <span class="text-danger small"><%=  %> </span>
+
+                            <div class="mb-3">
+                                <label for="image" class="form-label">Imagen</label>
+                                <input type="file" class="form-control <%= locals.errors && errors.image ? 'is-invalid' : locals.old && old.image ? 'is-valid' : null %> " id="nombre" name="image" value="" multiple>
+                                <span class="text-danger small"><%= locals.errors && errors.image ? errors.image.msg : null %> </span>
                             </div>
                             <div>
-                                <button type="submit">Guardar</button>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
 
                         </form>
@@ -40,6 +52,8 @@
             </div>
         </div>
     </main>
+
+    <%- include('partials/footer') %> 
     
 </body>
 </html>
