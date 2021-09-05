@@ -7,6 +7,7 @@ const session = require('express-session')
 
 const indexRouter = require('./routes/index')
 const productsRouter = require('./routes/products');
+const usersRouter = require('./routes/users')
 const cookieParser = require('cookie-parser');
  
 app.use(express.static('public'))
@@ -28,6 +29,7 @@ app.set('view engine', 'ejs')
 
 app.use('/', indexRouter)
 app.use('/products', productsRouter)
+app.use('/users', usersRouter)
 
 
 app.listen(port, () => console.log('Server running in port '+ port))
