@@ -71,5 +71,9 @@ module.exports = {
             })
 
         }
+    },
+    profile: (req, res) => res.render('profile'),
+    logout: (req, res) => {
+        req.session.destroy()
     }
 }
