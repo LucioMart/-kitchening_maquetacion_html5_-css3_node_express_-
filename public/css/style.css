@@ -50,6 +50,10 @@ header a.burger {
     text-align: center;
 }
 
+header nav ul {
+    padding-left: 0;
+}
+
 header nav ul li {
     width: 100;
     background-color: #63635d;
@@ -189,7 +193,7 @@ footer nav ul li a {
 @media(min-width: 769px) {
 
     header nav ul li {
-        font-size: 1rem;
+        font-size: 0.6rem;
     }
 
     article {
