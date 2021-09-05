@@ -1,3 +1,66 @@
 [
-    
+  {
+    "id": 1,
+    "name": "lucio",
+    "email": "luchio@gmail.com",
+    "pass": "$2a$10$lJ6iavE5Q8GQt.8H7SfpieVEomIJK05SIFW4mWqNj/vgw6x3ZtSBm",
+    "rol": "user",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 2,
+    "name": "lucio",
+    "email": "luchio@gmail.com",
+    "pass": "$2a$10$2FIzt1/akFr8pGvIuPGkCuVKhLFqLeN6hUIXy5GJU5M/ypa/78sky",
+    "rol": "user",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 3,
+    "name": "Lucio Martínez",
+    "email": "lucio@gmail.com",
+    "pass": "$2a$10$aJM5vQWx8vLOVdzLY/fYj.ZNBxmeIvK30LdOlMmIAgBGQsDR2iqNq",
+    "rol": "user",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 4,
+    "name": "alkfjalkfj",
+    "email": "alkfjalk@akfña.com",
+    "pass": "$2a$10$N44Cpg9w/mh6hLgVvDTyZuV3kAZqrwbVChRFf.KgkEGtv06u83bQW",
+    "rol": "user",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 5,
+    "name": "alkfjalkfj",
+    "email": "alkfjalk@akfña.com",
+    "pass": "$2a$10$Z4JzUR/MWBvCoZGbSKwqHumeCwCs4iwItOZZkHgKq3ac4sURTybwW",
+    "rol": "user",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 6,
+    "name": "alkfjalkfj",
+    "email": "alkfjalk@akfña.com",
+    "pass": "$2a$10$bM2NrgtvAytmVML.M.VvoeZK9L8BGfE9pAZgv5e3ON6c.MfeVy1IW",
+    "rol": "user",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 7,
+    "name": "alkfjalkfj",
+    "email": "alkfjalk@akfña.com",
+    "pass": "$2a$10$UxoLtNkiAv57GVBc7Pq4KeH/ouMufaAKAUju9NWHbBuHHo5TDFR62",
+    "rol": "user",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 8,
+    "name": "alkfjalkfj",
+    "email": "alkfjalk@akfña.com",
+    "pass": "$2a$10$Ec5U8z6Slp5r6WnUQjXX4un/rI/pGLUY0jRBOHn2fGLzmAkTvxM7C",
+    "rol": "user",
+    "avatar": "avatar_default.png"
+  }
 ]

@@ -14,28 +14,28 @@
                         <form action="/users/register" method="post">
                             <div class="mb-3"> 
                                 <label for="exampleInputName" class="form-label">Nombre</label>
-                                <input type="text" name="name" id="exampleInputName" class="form-control">
-                                <s></s>
+                                <input type="text" name="name" id="exampleInputName" class="form-control" value="<%= locals.old && old.name ? old.name : null %> ">
+                                <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail">Email</label>
-                                <input type="email" id="exampleInputEmail" name="email" class="form-control">
-                                <s></s>
+                                <input type="email" id="exampleInputEmail" name="email" class="form-control" value="<%= locals.old && old.email ? old.email : null %> ">
+                                <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword" class="form-label">Contraseña</label>
-                                <input type="password" name="pass" id="exampleInputPassword1" class="form-control">
-                                <s></s>
+                                <input type="password" name="pass" id="exampleInputPassword1" class="form-control" value="<%= locals.old && old.pass ? old.pass : null %> ">
+                                <span class="text-danger small"><%= locals.errors && errors.pass ? errors.pass.msg : null %> </span>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword2" class="form-label">Confirmar Contraseña</label>
-                                <input type="password" id="exampleInputPassword2" name="pass2" class="form-control">
-                                <s></s>
+                                <input type="password" id="exampleInputPassword2" name="pass2" class="form-control" value="<%= locals.old && old.pass2 ? old.pass2 : null %> ">
+                                <span class="text-danger small"><%= locals.errors && errors.pass2 ? errors.pass2.msg : null %> </span>
                             </div>
                             <div class="mb-3 form-check">
-                                <input type="checkbox" name="terms" id="exampleCheck1" class="form-check-input">
+                                <input type="checkbox" name="terms" id="exampleCheck1" class="form-check-input" >
                                 <label for="exampleCheck1" class="form-check-label" name="terms">Acepto términos y condiciones</label>
-                                <span></span>
+                                <span class="text-danger small"><%= locals.errors && errors.terms ? errors.terms.msg : null %> </span>
                             </div>
                             <button type="submit" class="btn btn-primary">Enviar</button>
                         </form>

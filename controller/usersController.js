@@ -34,7 +34,7 @@ module.exports = {
                 rol: user.rol
             }
 
-            return res.redirect('/')
+            return res.redirect('login')
 
         } else {
             return res.render('register', {
@@ -45,5 +45,31 @@ module.exports = {
     },
     login: (req, res) => {
         return res.render('login')
+    },
+    processLogin: (req, res) => {
+        let errors = validationResult(req)
+
+        if(errors.isEmpty()) {
+            let user = users.find(user => user.email === req.body.email.trim())
+
+            req.session.userLogin = {
+                id: user.id,
+                name : user.name,
+                avatar : user.avatar,
+                rol: user.rol
+            }
+
+            if(req.body.recordar) {
+                res.cookie("kitcheningLogin", req.session.userLogin, {maxAge:1000 * 60})
+            }
+            res.redirect('/')
+
+        } else {
+
+            return res.render('login', {
+                errors: errors.mapped()
+            })
+
+        }
     }
 }
