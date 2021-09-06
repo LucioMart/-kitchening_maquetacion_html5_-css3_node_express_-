@@ -4,7 +4,6 @@ const users = require('../data/users.json')
 const fs = require('fs')
 const path = require('path')
 
-
 module.exports = {
     register: (req, res) => {
         return res.render('register')
@@ -72,8 +71,18 @@ module.exports = {
 
         }
     },
-    profile: (req, res) => res.render('profile'),
+    profile: (req, res) => {
+        res.render('profile', {
+            user : users.find(user => user.id === +req.session.userLogin.id)
+        })
+    },
+    update: (req, res) => {
+        let errors = validationResult(req)
+        return res.send(errors)
+    },
     logout: (req, res) => {
         req.session.destroy()
+
+        return res.redirect('/')
     }
 }
